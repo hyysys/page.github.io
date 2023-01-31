@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>.accordion {
+    box-sizing: border-box;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    width: 80%;
+    
+}
+
+.accordion-select {
+    cursor: pointer;
+    margin: 0px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border: 1px solid transparent;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.accordion-title span {
+    bottom: 0px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.accordion-content {
+    box-sizing: border-box;
+    overflow: auto;
+    position: relative;
+    transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+    margin-bottom: 0;
+    margin-right: 0;
+}
+
+/* Generated styles starts here */
+
+.accordion {
+    border-color: #dedede;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    flex-direction: column;
+    height: auto;
+} 
+
+.accordion-title,
+.accordion-select  {
+    background-color: #ffffff;
+    color: #7f8787;
+    width: 100%;
+    height: 65px;
+    font-size: 15px;
+}
+
+.accordion-select {
+    margin-bottom: -65px;
+    margin-right: 0;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+    border-bottom-color: rgb(234, 234, 234);
+    border-right-color: transparent;
+} 
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+    background-color: #ffffff;
+} 
+
+ .accordion-title span  {	
+    transform: rotate(0deg);
+    -ms-writing-mode: lr-tb;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    padding-left: 33px;
+    padding-right: 33px;
+    line-height: 65px;
+    text-align: center;
+} 
+
+.accordion-content {
+    background-color: #f7f7f7;
+    color: #7f8787;
+    height: 280px;
+    margin-bottom: -280px;
+    margin-right: 0;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+} 
+a{font-size: x-large;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    font-size: xx-large;
+}
+</style>
+<body style="background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 34%, rgba(148,187,233,1) 77%);display: flex;flex-direction: column;align-items: center;">
+<div class="flex">本网站用于分享各种类型网站，如有需要请自行点击网站名进行跳转</div>
+<div class="accordion">
+     <input type="radio" name="select" class="accordion-select" checked />
+    <div class="accordion-title" style="text-align: center;color: blueviolet;"><span><strong>看动漫</strong></span></div>
+    <div class="accordion-content" style="text-align: center;">
+        <a href="https://bangumi.moe/" >bangumi.moe</a><br>各大字幕组首发种子站<br><img src="./0.png" alt="图" width="400px"><br>
+        <a href="https://omofun.tv/">omofun</a><br>仅支持手机端的高清动漫软件<br><img src="./1.png" alt="tu" width="400px">
+    </div> 
+         <input type="radio" name="select" class="accordion-select" />
+    <div class="accordion-title" style="color: aqua;"><span><strong>开源项目社区</strong></span></div>
+    <div class="accordion-content"><a href="https://github.com/">Github</a><br>
+        最大的开源社区<br><img src="./2.png" alt="" width="400px"><br>
+        <a href="https://gitee.com/">Gitee</a><br>
+        国内仿GitHub建造的开源社区<br><img src="./屏幕截图 2023-01-31 135334.png" alt="" width="400px">
+    </div> 
+         <input type="radio" name="select" class="accordion-select" />
+    <div class="accordion-title" style="color: darkorchid;"><span><strong>常用镜像站</strong></span></div>
+    <div class="accordion-content">
+        <a href="https://ghproxy.com/">ghproxy</a><br>
+        Github镜像加速站<br>
+        <img src="./屏幕截图 2023-01-31 135852.png" alt="" width="400px"><br>
+        <a href="https://mirrors.tuna.tsinghua.edu.cn/">清华大学镜像站</a><br>
+        国内常用镜像站<br>
+        <img src="./屏幕截图 2023-01-31 140145.png" alt="" width="400px">
+    </div>
+    <input type="radio" name="select" class="accordion-select" checked />
+    <div class="accordion-title" style="color: rgb(233, 11, 11);"><span><strong>编程学习</strong></span></div>
+    <div class="accordion-content"><a href="https://www.runoob.com/">菜鸟编程</a><br>
+        免费编程学习平台<br>
+    <img src="./屏幕截图 2023-01-31 142351.png" alt="" width="400px"></div>
+</div>
+</body>
+</html>
